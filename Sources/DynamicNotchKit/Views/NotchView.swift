@@ -21,12 +21,12 @@ struct NotchView<Expanded, CompactLeading, CompactTrailing>: View where Expanded
         if case let .notch(topCornerRadius, bottomCornerRadius) = dynamicNotch.style {
             (top: topCornerRadius, bottom: bottomCornerRadius)
         } else {
-            (top: 15, bottom: 20)
+            (top: 20, bottom: 24)
         }
     }
 
     private var compactNotchCornerRadii: (top: CGFloat, bottom: CGFloat) {
-        (top: 6, bottom: 14)
+        (top: 10, bottom: 20)
     }
 
     private var minWidth: CGFloat {

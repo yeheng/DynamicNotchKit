@@ -29,11 +29,11 @@ struct NotchlessView<Expanded, CompactLeading, CompactTrailing>: View where Expa
             .background {
                 VisualEffectView(material: .popover, blendingMode: .behindWindow)
                     .overlay {
-                        RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
+                        Capsule()
                             .strokeBorder(.quaternary, lineWidth: 1)
                     }
             }
-            .clipShape(.rect(cornerRadius: cornerRadius))
+            .clipShape(Capsule())
             .padding(20)
             .onGeometryChange(for: CGFloat.self, of: \.size.height) { newHeight in
                 // This makes sure that the floating window FULLY slides off before disappearing
